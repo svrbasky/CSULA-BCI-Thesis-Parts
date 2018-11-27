@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {./Images/} }
+\usepackage{url}
+% By default the URLs are put in typewriter type in the body and the
+% bibliography of the document when using the \url command.  If you are
+% using many long URLs you may want to uncommennt the next line so they
+% are typeset a little smaller.
+\renewcommand{\UrlFont}{\small\tt}
+
+
+\title{A Comparative Study Of Brain Computer Interface Algorithms: SVM Classifiers vs Neural Networks}
+\author{Krishna Vijay Samayamantri}
+\date{November 2018}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%           List of Figures                %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\listoffigures 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%           List of Tables                 %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\listoftables
+
+\newpage
+\section{Results and Discussion}
+% Data 
+\subsection{Data}
+Initially, data collected using the Emotiv system
+
+
+
+% Physical Setup
+\subsection{Experimental Setup}
+For our data collection, we have used the Emotiv EPOC+ BCI device coupled with EmotivPRO,  the corresponding software. Through our setup, we were able to collect EEG data with markers indicating the occurrence of each "event" in order to obtain ERP's. 
+
+
+
+
+
+
+
+% Experiment Details
+\subsubsection{Experiment Details}
+ 
+
+We have created a simple test that records the subject's EEG for motor intent and motor action. Each subject is asked to sit on a chair with their hands resting on a table in front of them. They are asked to look at a computer screen that shows them cues for each event. First, they get the cue 'Relax' which tells them to relax and be still. After 5 seconds, they get the cue 'Ready Left' or 'Ready Right' randomly. The subject is supposed to imagine the motor intent that they are going to perform after 5 seconds, which is touch an object placed on the table with the chosen hand. Finally, they get the cue 'Reach' when they reach out with the chosen hand and actually touch the object (Shown in Figure \ref{fig:Experimental Setup}). A simple LabVIEW program (Shown in Figure \ref{fig:LabVIEW Light Sequence}) is created that displays the cue for each event and sends corresponding markers to EmotivPRO via com port. This program also sends a marker indicating 'end of cycle.' The program repeats the cycle 50 times for each session.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%              References                  %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\bibliographystyle{ieeetr} % IEEE Reference Style
+\bibliography{References} % BibTEX file name where references are listed
+
+
+% In final draft I shall put list of figures at the top of the document as required
+
+\end{document}
